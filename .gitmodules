@@ -1,0 +1,3 @@
+[submodule "modules/spinorkit"]
+	path = modules/spinorkit
+	url = https://github.com/spinorkit/FanDuctOpenSCAD.git
