@@ -89,7 +89,8 @@ if (metalPartsOnly == false) {
 }
 
 //E3D coldends
-module coldend() {
+function coldend() {
+	return (
 	for(i = [0: 120: 270]) {
 		rotate([0, 0, i])
 		rotate([0, angle, 0])
@@ -126,10 +127,11 @@ module coldend() {
 			}
 		}
 	}
+	)
 }
 
 
-module hotend() {   // Diamond mock-up
+function hotend() {   // Diamond mock-up
 	difference() {
 		translate([0, 0, -1.4])
 		union() {
