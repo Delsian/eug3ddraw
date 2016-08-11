@@ -13,7 +13,7 @@ pitch=2*3.1415*pitchRadius/numberTeeth;
 
 angle=-360*$t;
 offset=2;
-
+circles=6;
 distance=radius+pitchRadius+0.0*pitch;
 
 // diameter of driving threaded rod from stepper
@@ -53,6 +53,13 @@ module GearsWorm() {
 }
 
 module GearsGear() {
+	translate([0,0,thickness/2])
+	rotate([90,0,0])
+	for (i=[0:circles]) {
+		rotate([0,360/circles*i],0)
+		translate([0,0,8])
+		cylinder(d=thickness*0.8,h=26);
+	}
 	gear ( 
 		number_of_teeth=numberTeeth,
 		circular_pitch=360*pitchRadius/numberTeeth,
@@ -64,7 +71,7 @@ module GearsGear() {
 		hub_thickness=thickness,
 		hub_diameter=20,
 		bore_diameter=10,
-		circles=6,
+		circles=circles,
 		backlash=0.1,
 		twist=-pitchRadius/radius,
 		involute_facets=0,
