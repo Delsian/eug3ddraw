@@ -3,8 +3,9 @@
  * SCARA arm
  */
  
-use <../lib/gears/parametric_involute_gear_v5.0.scad>
-use <pipe.scad>
+use <../lib/gears/parametric_involute_gear_v5.0.scad>;
+use <../lib/WormDrive-NoThroat.scad>;
+use <pipe.scad>;
 use <ISOThread.scad>;
 
 // Arm sizes in mm
