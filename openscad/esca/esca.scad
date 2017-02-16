@@ -4,9 +4,9 @@
  */
  
 use <../lib/gears/parametric_involute_gear_v5.0.scad>;
+use <../lib/WormDrive-NoThroat.scad>;
 use <pipe.scad>;
 use <ISOThread.scad>;
-use <gears.scad>;
 
 // Arm sizes in mm
 // first segment
@@ -60,6 +60,5 @@ module near_arm_mount_near() {
     }
 }
 
-translate([-60,0,0]) GearSet();
-//arm_near();
+arm_near();
 //near_arm_mount_near();
