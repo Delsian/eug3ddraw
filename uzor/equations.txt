@@ -1,0 +1,5 @@
+﻿"SideLenght"= 30
+"Tickness" = 1.5
+"Connector"= 6
+"ConnectorPin"= 3
+"LineWidth"= 1.2
